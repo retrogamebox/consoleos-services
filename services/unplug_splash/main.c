@@ -25,10 +25,10 @@ void main(void) {
 	arrow_surface = minigl_new_image_surface("/kappa/services/unplug_splash/arrow.ipx");
 	
 	minigl_viewport(width / 2 - box_surface->width / 2, height / 2 - box_surface->height / 2, box_surface->width, box_surface->height);
-	float cable_screen_height = (float) cable_surface->height / height * 4;
+	float cable_screen_height = (float) cable_surface->height / box_surface->height * 2;
 	
-	float arrow_screen_width  = (float) arrow_surface->width  / width  * 4;
-	float arrow_screen_height = (float) arrow_surface->height / height * 4;
+	float arrow_screen_width  = (float) arrow_surface->width  / box_surface->width  * 2;
+	float arrow_screen_height = (float) arrow_surface->height / box_surface->height * 2;
 	
 	float animation = 0.0;
 	
